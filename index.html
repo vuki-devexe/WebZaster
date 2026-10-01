@@ -13,6 +13,52 @@
 	<link rel="stylesheet" href="fonts.css">
 	
 	<style>
+        /* Outer LinearLayout (match_parent layout with 10dp padding) */
+        .outer-layout {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            background-color: #ffffff;
+        }
+
+        /* ScrollView equivalent (layout_weight="1" and scrollable) */
+        .scroll-view {
+            flex: 1;
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        /* Inner LinearLayout inside ScrollView */
+        .inner-layout {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        /* Mapping Android TextView properties */
+        .text-view {
+            width: 100%;
+            text-align: center; /* android:gravity="center" */
+            color: #212121;
+        }
+
+        .main-title {
+            font-size: 28px; /* 28sp */
+            font-weight: bold; /* textStyle="bold" */
+        }
+
+        .section-header {
+            font-size: 18px; /* 18sp */
+            font-weight: bold; /* textStyle="bold" */
+        }
+
+        .body-text {
+            font-size: 10px; /* 10sp */
+        }
+    </style>
+	<style>
 	html, body {
 		background-color: RGBA(50,50,50,255);
 		color: white;
@@ -74,15 +120,97 @@
 		</tr>
 	</table>
 	
-	<table id="set" width="100%" height="100%" cellpadding="0" cellspacing="0" table-layout="fixed" position="fixed" style="display: none;">
+	<table id="set" align="center" width="50%" height="50%" cellpadding="0" cellspacing="0" table-layout="fixed" position="fixed" style="position: fixed; display: none; background-color: RGBA(50,50,50,255); overflow: hidden; border-style: solid; top: 50%; left: 50%; transform: translate(-50%, -50%);  width: 50%;">
 		<tr max-height="40px">
 			<td class="eviltd" align="center" valign="top" style="height: 40px;">
 				<h1 id="text1">Settings</h1>
+				<table id="settings_page_2" style="height: 50%; display: none;" width="100%">
+					<tr>
+						<td align="center">
+							<!-- Outer LinearLayout -->
+							<div class="outer-layout" style="height: 480px; overflow-y: auto;">
+								
+								<!-- ScrollView -->
+								<div class="scroll-view">
+									
+									<!-- Inner LinearLayout -->
+									<div class="inner-layout">
+										<h1 class="text-view main-title" id="options_title">About TapZaster</h1>
+										
+										<h2 class="text-view section-header">Main Dev</h2>
+										<p class="text-view body-text">VukiDev (YT <a href="https://www.youtube.com/@VukiDev" target="_blank">@VukiDev</a>)</p>
+
+										<h2 class="text-view section-header">a game for</h2>
+										<p class="text-view body-text">Techzaster (YT <a href="https://www.youtube.com/@Techzaster" target="_blank">@Techzaster</a></p>
+
+
+										<h2 class="text-view section-header">Playtesters</h2>
+										<p class="text-view body-text">Techzaster (YT <a href="https://www.youtube.com/@Techzaster" target="_blank">@Techzaster</a>)</p>
+										<p class="text-view body-text">
+											Lilly (DISK @tigersusyt, neocities <a href="https://tigersusyt.neocities.org/" target="_blank">https://tigersusyt.neocities.org/</a>)
+										</p>
+										<p class="text-view body-text">
+											Dice (YT <a href="https://www.youtube.com/channel/UCtIQwsKsx6E1G1F_EA18YnA" target="_blank">https://www.youtube.com/channel/UCtIQwsKsx6E1G1F_EA18YnA</a>)
+										</p>
+										<p class="text-view body-text">
+											twrpguy (YT <a href="https://www.youtube.com/channel/UCGmbt4yk7q-C7BEkwEM8bIw" target="_blank">https://www.youtube.com/channel/UCGmbt4yk7q-C7BEkwEM8bIw</a>)
+										</p>
+										<p class="text-view body-text">
+											NurGamingYT (<a href="https://www.youtube.com/channel/UCLAQR5Ru4FfiSMWuPZBG_Sg" target="_blank">https://www.youtube.com/channel/UCLAQR5Ru4FfiSMWuPZBG_Sg</a>)
+										</p>
+										<p class="text-view body-text">
+											akivec (YT <a href="https://www.youtube.com/channel/UCT4eEWrrrT3FR08StvG9rag" target="_blank">https://www.youtube.com/channel/UCT4eEWrrrT3FR08StvG9rag</a>)
+										</p>
+										<p class="text-view body-text">
+											binsifir0 (YT <a href="https://www.youtube.com/channel/UCnEJ-zplTylm41DLCAUcp7A" target="_blank">https://www.youtube.com/channel/UCnEJ-zplTylm41DLCAUcp7A</a>)
+										</p>
+										<p class="text-view body-text">duyhaofun (DISCOR @duyhaofun.1)</p>
+										<p class="text-view body-text">
+											cat (DISCOR @lazy.ass.cat, YT <a href="https://www.youtube.com/@Cat12302" target="_blank">https://www.youtube.com/@Cat12302</a>)
+										</p>
+										<p class="text-view body-text">
+											vocaloid.01 (YT <a href="https://www.youtube.com/channel/UCl132QSNZIFdlOxr4irBE3w" target="_blank">https://www.youtube.com/channel/UCl132QSNZIFdlOxr4irBE3w</a>)
+										</p>
+										<p class="text-view body-text">
+											Chungus_linus (YT <a href="https://www.youtube.com/channel/UC6aHyTsOdXshgTo5e63J9cw" target="_blank">https://www.youtube.com/channel/UC6aHyTsOdXshgTo5e63J9cw</a>)
+										</p>
+
+										<h2 class="text-view section-header">Special Thanks to</h2>
+										<p class="text-view body-text">Techzaster Discord Community</p>
+										<p class="text-view body-text">My Friends</p>
+										<p class="text-view body-text">sonic.exe (no reason)</p>
+										<p class="text-view body-text">and you for playing my game ;3</p>
+
+									</div>
+									
+								</div>
+								
+							</div>
+						</td>
+					</tr>
+					<tr max-height="40px">
+						<td valign="bottom" style="height: 40px;">
+							<button onclick="CloseSet();" id="EVILEXITMUHAHAHHAA" style="height: 40px; width: 100%;">Close</button>
+						</td>	
+					</tr>
+				</table>
+				<table id="settings_page_1" width="100%">
+					<tr>
+						<td align="center" style="height: 50px;">
+							<button id="set1" style="height: 50px; width: 50%;">About Tapzaster/Webzaster</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="height: 50px;">
+							<button onclick="document.location='DESTROY-THE-LAG.mp4'" id="set2" style="height: 50px; width: 50%;">Evil Option</button>
+						</td>
+					</tr>
+				</table>
 			</td>
 		</tr>
 		<tr max-height="40px">
 			<td valign="bottom" style="height: 40px;">
-				<button onclick="CloseSet();" style="height: 40px; width: 100%;">Close</button>
+				<button onclick="CloseSet();" id="evilcolse" style="height: 40px; width: 100%;">Close</button>
 			</td>	
 		</tr>
 	</table>

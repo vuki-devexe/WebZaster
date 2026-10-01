@@ -35,6 +35,34 @@ document.getElementById("wonderwhothisguyishey?").addEventListener('click', func
 	the_fucking_score = the_fucking_score + (BigInt(1) + phones);
 	changetextzasterNOW()
 });
+document.getElementById("set1").addEventListener('click', function() {
+	var a = document.getElementById("settings_page_2");
+	if (a != null) {
+		a.style.display = "table";
+	}
+	var a = document.getElementById("settings_page_1");
+	if (a != null) {
+		a.style.display = "none";
+	}
+	var a = document.getElementById("evilcolse");
+	if (a != null) {
+		a.style.display = "none";
+	}
+});
+document.getElementById("EVILEXITMUHAHAHHAA").addEventListener('click', function() {
+	var a = document.getElementById("settings_page_2");
+	if (a != null) {
+		a.style.display = "none";
+	}
+	var a = document.getElementById("settings_page_1");
+	if (a != null) {
+		a.style.display = "table";
+	}
+	var a = document.getElementById("evilcolse");
+	if (a != null) {
+		a.style.display = "block";
+	}
+});
 
 //Close and open shop Zaster02
 function CloseShop() {
